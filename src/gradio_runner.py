@@ -214,7 +214,7 @@ def go_gradio(**kwargs):
                                  radius_size=gr.themes.sizes.spacing_md))
 
     theme = H2oTheme(**theme_kwargs) if kwargs['h2ocolors'] else SoftTheme(**theme_kwargs)
-    demo = gr.Blocks(theme=theme, css=css_code, title="h2oGPT", analytics_enabled=False)
+    demo = gr.Blocks(theme=theme, css=css_code, title="lv23GPT", analytics_enabled=False)
     callback = gr.CSVLogger()
 
     model_options0 = flatten_list(list(prompt_type_to_model_name.values())) + kwargs['extra_model_options']
