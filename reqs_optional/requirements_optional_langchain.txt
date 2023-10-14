@@ -1,0 +1,57 @@
+# optional for chat with PDF
+langchain==0.0.300
+pypdf==3.14.0
+# avoid textract, requires old six
+#textract==1.6.5
+pypdfium2==4.19.0
+
+# for HF embeddings
+sentence_transformers==2.2.2
+
+# optional: for OpenAI endpoint or embeddings (requires key)
+openai==0.28.1
+replicate==0.10.0
+
+# local vector db
+chromadb==0.4.13
+
+# chroma migration
+chroma-migrate==0.0.7
+duckdb==0.7.1
+https://h2o-release.s3.amazonaws.com/h2ogpt/chromamigdb-0.3.25-py3-none-any.whl
+https://h2o-release.s3.amazonaws.com/h2ogpt/hnswmiglib-0.7.0.tgz
+
+# server vector db
+#pymilvus==2.2.8
+
+# weak url support, if can't install opencv etc. If comment-in this one, then comment-out unstructured[local-inference]==0.6.6
+# unstructured==0.8.1
+
+# strong support for images
+# Requires on Ubuntu: sudo apt-get install libmagic-dev poppler-utils tesseract-ocr libtesseract-dev libreoffice
+unstructured[local-inference]==0.9.0
+#pdf2image==1.16.3
+#pytesseract==0.3.10
+pillow==9.5.0
+posthog==3.0.1
+
+pdfminer.six==20221105
+urllib3
+requests_file
+
+#pdf2image==1.16.3
+#pytesseract==0.3.10
+tabulate==0.9.0
+# FYI pandoc already part of requirements.txt
+
+# JSONLoader, but makes some trouble for some users
+# TRY: apt-get install autoconf libtool
+# unclear what happens on windows/mac for now
+jq==1.4.1; platform_machine == "x86_64"
+
+# to check licenses
+# Run: pip-licenses|grep -v 'BSD\|Apache\|MIT'
+pip-licenses==4.3.0
+
+# weaviate vector db
+weaviate-client==3.22.1

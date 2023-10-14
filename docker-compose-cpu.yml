@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  h2ogpt:
+    image: ${H2OGPT_RUNTIME}
+    restart: always
+    shm_size: '2gb'
+    ports:
+      - '7860:7860'
+    volumes:
+      - cache:/workspace/.cache
+      - save:/workspace/save
+    command: ${H2OGPT_CPU_ARGS}
+
+volumes:
+  cache:
+  save:
