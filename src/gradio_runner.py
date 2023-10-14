@@ -186,7 +186,7 @@ def go_gradio(**kwargs):
     if is_hf:
         description_bottom += '''<a href="https://huggingface.co/spaces/h2oai/h2ogpt-chatbot?duplicate=true"><img src="https://bit.ly/3gLdBN6" style="white-space: nowrap" alt="Duplicate Space"></a>'''
     #Forcing description to be None
-    description = None
+    description = "lv23GPT"
     task_info_md = ''
     css_code = get_css(kwargs)
 
@@ -540,10 +540,10 @@ def go_gradio(**kwargs):
         requests_state0 = dict(headers='', host='', username='')
         requests_state = gr.State(requests_state0)
 
-        if description is not None:
-            gr.Markdown(f"""
-                {get_h2o_title(title, description) if kwargs['h2ocolors'] else get_simple_title(title, description)}
-                """)
+        #if description is not None:
+        gr.Markdown(f"""
+            {get_h2o_title(title, description) if kwargs['h2ocolors'] else get_simple_title(title, description)}
+            """)
 
         # go button visible if
         base_wanted = kwargs['base_model'] != no_model_str and kwargs['login_mode_if_model0']

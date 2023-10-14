@@ -154,7 +154,7 @@ def main(
         num_async: int = 3,
         show_examples: bool = None,
         verbose: bool = False,
-        h2ocolors: bool = True,
+        h2ocolors: bool = False,
         dark: bool = False,  # light tends to be best
         height: int = 600,
         show_lora: bool = True,
